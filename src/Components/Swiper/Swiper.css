@@ -1,0 +1,185 @@
+/* src/components/swiper/SwiperSlider.css */
+.outer-wrapper {
+padding: 0 40px;             /* White space on both sides */
+  position: relative;          /* Needed for absolutely positioning arrows */
+  overflow: visible;  
+  padding-top: 50px;
+      padding-bottom: 40px;
+}
+
+.swiper-container-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.mySwiper img {
+  display: flex
+;
+    width: 100%;
+
+    height: auto;
+    object-fit: contain; 
+}
+
+.banner-container {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically (optional) */
+  width: 100%;
+  height: auto;              /* Or a specific height if needed */
+}
+
+.banner-slide1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #1c2230;
+  border-radius: 16px;
+  color: white;
+    padding: 78px 90px; 
+    overflow: hidden;/* 👈 Adds space on both left and right sides */
+    position:relative;
+}
+
+.banner-slide2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #a4d56d;
+  border-radius: 16px;
+  color: white;
+    padding: 78px 90px; 
+    overflow: hidden;/* 👈 Adds space on both left and right sides */
+    position:relative;
+}
+.banner-slide3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #90128a;
+  border-radius: 16px;
+  color: white;
+    padding: 78px 90px; 
+    overflow: hidden;/* 👈 Adds space on both left and right sides */
+    position:relative;
+}
+.banner-left {
+  padding-left: 20px;
+}
+
+.banner-left h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.banner-left p {
+      font-size: 4.5rem;
+  margin: 0;
+}
+
+.banner-right {
+  padding-right: 20px;
+}
+
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f40000;
+  z-index: 10;
+  position:absolute;
+}
+
+.swiper-button-prev {
+  left: 8px; /* Move left outside */
+}
+
+.swiper-button-next {
+  right: 8px; /* Move right outside */
+}
+
+
+/*media queries*/
+/* 1553px and below */
+@media (max-width: 1553px) {
+  .banner-slide1,.banner-slide2,.banner-slide3 {
+    padding: 60px 70px;
+  }
+
+  .banner-left p {
+    font-size: 3.5rem;
+  }
+
+  .swiper-button-prev {
+    left: 4px;
+  }
+
+  .swiper-button-next {
+    right: 4px;
+  }
+}
+
+/* 1368px and below */
+@media (max-width: 1368px) {
+  .banner-slide1,.banner-slide2,.banner-slide3 {
+    padding: 50px 50px;
+  }
+
+  .banner-left p {
+    font-size: 3rem;
+  }
+}
+
+/* 1112px and below */
+@media (max-width: 1112px) {
+  .banner-slide1,.banner-slide2,.banner-slide3 {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+  }
+
+  .banner-left, .banner-right {
+    padding: 0;
+  }
+
+  .banner-left p {
+    font-size: 2.5rem;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+}
+
+/* 600px and below (mobile view) */
+@media (max-width: 600px) {
+  .banner-slide1,.banner-slide2,.banner-slide3 {
+    padding: 20px 15px;
+  }
+
+  .banner-left h2 {
+    font-size: 1.2rem;
+  }
+
+  .banner-left p {
+    font-size: 1.8rem;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none; /* Hide arrows on mobile if needed */
+  }
+}

@@ -1,0 +1,50 @@
+.detail-container {
+  display: flex;
+  padding-top: 40px;
+  gap: 40px;
+  align-items: flex-start;
+
+  
+}
+
+.detail-image {
+  width: 50%;
+  height: 450px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.detail-info h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.detail-price {
+  font-size: 24px;
+  color: green;
+  margin-bottom: 12px;
+}
+
+.detail-info p {
+  margin-bottom: 12px;
+  font-size: 16px;
+      font-weight: 600;
+}
+
+.addbutton{
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    background-color: #2a9d8f;
+    color: white;
+    padding-right: 60px;
+    padding-left: 60px;
+}

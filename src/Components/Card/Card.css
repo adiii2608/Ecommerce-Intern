@@ -1,0 +1,185 @@
+.card-link {
+  width:calc((100% - 60px) / 4);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-right:20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+     background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+margin-bottom:20px;
+text-decoration: none;
+}
+
+
+.card-content {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.card-link:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Style every odd card with a subtle alternate background */
+
+
+/* Make every 3rd card have a bigger margin on the right */
+
+.card-link:nth-child(4n) {
+  margin-right: 0;
+  text-decoration:none;
+}
+
+
+/* For example, change the title color on every 2nd card */
+
+
+/* Add a border to the first card */
+
+
+.card:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.card-image {
+  
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+width:40%;
+max-height:96px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 8px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  
+  display: -webkit-box;
+  -webkit-line-clamp: 2;      /* Show only 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+
+}
+
+.card-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2a9d8f;
+  margin: 4px 0;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+text-decoration: none;
+  white-space: nowrap;        /* Prevent text from wrapping */
+  overflow: hidden;           /* Hide overflowed text */
+  text-overflow: ellipsis;    /* Show ... for overflow */
+  width: 330px;           /* Set a width constraint (adjust as needed) */
+  margin: 0 auto;             /* Optional: center inside parent */
+}
+
+/* Width ≤ 1556px */
+@media (max-width: 1556px) {
+  .card-link {
+   
+    margin-right: 20px;
+  }
+
+  .card-description {
+    width: 300px;
+  }
+}
+
+/* Width ≤ 1367px */
+@media (max-width: 1368px) {
+  .card-link {
+    
+    margin-right: 20px;
+  }
+
+  .card-description {
+    width: 260px;
+  }
+
+  .card-image {
+    width: 78%;
+    margin-left: 31px;
+  }
+}
+
+/* Width ≤ 1112px */
+@media (max-width: 1112px) {
+  .card-link {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .card-description {
+    width: 90%;
+    font-size: 13px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-price {
+    font-size: 25px;
+  }
+
+  .card-image {
+   width: 50%;
+
+        display: block;
+        margin: auto;
+  }
+}
+
+/* Width ≤ 600px */
+@media (max-width: 600px) {
+  .card-title {
+    font-size: 15px;
+        width: 100%;
+  }
+
+  .card-price {
+    font-size: 13px;
+  }
+
+  .card-description {
+    font-size: 12px;
+    width: 14%;
+  }
+
+  .card-link {
+    padding: 10px;
+    margin-right: 0;
+  }
+
+  .card-image {
+  width: 30%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}

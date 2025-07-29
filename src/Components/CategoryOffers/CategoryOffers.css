@@ -1,0 +1,41 @@
+.category-offers-container {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 20px 40px;
+  overflow-x: auto;
+}
+
+.offer-card {
+  text-align: center;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.offer-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.offer-card .title {
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.offer-card .discount {
+  color: #555;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 600px) {
+  .offer-card {
+    width: 100% !important;
+    box-sizing: border-box;
+    margin: 0 auto; /* Optional: center the card */
+  }
+}

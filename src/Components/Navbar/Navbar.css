@@ -1,0 +1,303 @@
+/* Base styles */
+.navbar {
+  width: 100%;
+  background-color: #2A9D8F;
+  box-shadow: 0 1px 3px -2px black;
+}
+
+.navbar-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-menu-container.active::before {
+  content: '';
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 90px);
+ 
+  z-index: -1;
+}
+
+
+/* Shared mobile/desktop header layout */
+.nav-mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  min-height: 90px;
+}
+
+/* Logo styles */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo img.logo {
+  width: 50px;
+  height: 45px;
+}
+
+.nav-logo p {
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* Cart styles */
+.nav-login-cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.nav-cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Menu container */
+.nav-menu-container {
+  display: flex;
+  justify-content: center;
+  transition: max-height 0.3s ease-in-out;
+  width:100%;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+ padding-right: 270px;
+ 
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-menu li a.active-link {
+  border-bottom: 2px solid #fff;
+}
+/* Desktop styles (above 600px) */
+
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+  gap: 8px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.nav-btn:hover {
+  color: #4f46e5;
+}
+
+.profile-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.profile-text {
+  display: inline;
+}
+
+span.nav-user {
+    width: 100%;
+    display: flex
+;
+}
+
+.nav-user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  justify-content: flex-start; /* 👈 This moves content to the left */
+}
+
+/* Large desktop styles */
+@media screen and (max-width: 1556px) {
+  .nav-login-cart {
+    position: absolute;
+    top: 28px;
+        right: 65px;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1367px) {
+  .nav-login-cart {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1112px) {
+  .nav-login-cart {
+        display:flex;
+        top: 31px;
+        right: 32px;
+        gap: 20px;
+  }
+}
+
+/* Mobile styles (600px and below) */
+
+
+/* Mobile view */
+@media screen and (max-width: 1112px) {
+  .nav-mobile-header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-logo {
+    justify-content: center;
+    flex: 1;
+  }
+
+  .nav-login-cart {
+    align-self: flex-end;
+  }
+
+  .nav-menu-container {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu-container.active {
+    max-height: 100vh;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .nav-menu li a {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 1112px) {
+  .navbar-layout {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0px;
+  }
+
+  .nav-mobile-header {
+    display: flex; /* <-- Show this on desktop too */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    width: 100%;
+  }
+
+  .nav-logo p {
+    font-size: 23px;
+    color: white;
+    font-weight: 600;
+  }
+
+  .logo {
+    width: 65px;
+    height: 60px;
+  }
+
+  .cart-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+    color: white;
+  }
+
+ 
+
+  .nav-menu-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+  }
+
+  .nav-menu {
+    display: flex;
+ 
+    gap: 40px;
+    list-style: none;
+    padding-right:0px
+    
+  }
+}
+
+@media screen and (min-width: 1368px){
+  .nav-menu{
+    padding-right:380px;
+  }
+}
+
+/* DEBUG OVERRIDES — FORCE VISIBILITY */
